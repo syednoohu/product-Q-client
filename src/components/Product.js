@@ -1,5 +1,6 @@
-
+//https://stackoverflow.com/questions/50272814/image-on-material-ui-cardmedia
 import React from 'react';
+import { makeStyles } from '@mui/styles';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -9,24 +10,33 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import QuestionMarkTwoToneIcon from '@mui/icons-material/QuestionMarkTwoTone';
 
-import pic1 from '../assets/images/products/pic1.jpg'
+// import pic1 from '../assets/images/products/pic1.jpg'
 
-export default function Product() {
+const useStyles = makeStyles({
+  media : {
+    height :300,
+    objectFit:'fill'
+  }
+})
+export default function Product({ id, title,description, price, photo  }) {
+  console.log(photo)
+  const classes = useStyles();
   return (
     <Card elevation={3}>
       <CardHeader
-        title="DSLR cameras from Nikon"
-        subheader="₹ 11.99"
+        title={title}
+        subheader={'₹ '+price}
       />
       <CardMedia
+        className={classes.media}
         component="img"
-        height="150"
-        image={pic1}
+        // height="250"
+        image= {photo}
         alt="Paella dish"
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia eros dolor, et aliquet dui sollicitudin at. Integer fringilla suscipit sapien, vitae ultrices leo pretium ut. Donec egestas nunc a nibh faucibus volutpat. Nunc id ex feugiat neque fringilla efficitur.
+            {description}
         </Typography>
       </CardContent>
       <CardActions >
