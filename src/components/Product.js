@@ -7,11 +7,9 @@ import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
-import IconButton from '@mui/material/IconButton';
 import QuestionMarkTwoToneIcon from '@mui/icons-material/QuestionMarkTwoTone';
 
 import pic1 from '../assets/images/products/pic1.jpg'
-import { styled } from '@mui/material/styles';
 
 export default function Product() {
   return (
