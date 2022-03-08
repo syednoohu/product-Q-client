@@ -25,7 +25,7 @@ export default function Product({ id, title,description, price, photo  }) {
     <Card elevation={3}>
       <CardHeader
         title={title}
-        subheader={price}
+        subheader={'₹ '+price}
       />
       <CardMedia
         className={classes.media}

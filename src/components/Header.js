@@ -4,9 +4,6 @@ import  '../index.css'
 
 // import logo from '../assets/images/logo1.png'
 
-
-
-
 const Header = () => {
   return (
     <header className='header'>
