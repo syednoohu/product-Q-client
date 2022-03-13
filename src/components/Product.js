@@ -18,8 +18,8 @@ const useStyles = makeStyles({
     objectFit:'fill'
   }
 })
-export default function Product({ id, title,description, price, photo  }) {
-  console.log(photo)
+export default function Product({ id, title,description, price, photo, openEnquiry  }) {
+  console.log(openEnquiry)
   const classes = useStyles();
   return (
     <Card elevation={3}>
@@ -41,6 +41,7 @@ export default function Product({ id, title,description, price, photo  }) {
       </CardContent>
       <CardActions >
        <Button 
+         onClick={() => openEnquiry(id)}
           size="small"
           variant='outlined'
           endIcon={<QuestionMarkTwoToneIcon/>}
