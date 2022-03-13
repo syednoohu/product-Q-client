@@ -1,6 +1,5 @@
 import { Grid } from '@mui/material'
 import React, { useState } from 'react'
-import { Dialog, DialogContent, DialogTitle } from '@mui/material'
 
 import Product from '../components/Product'
 import './home.css'

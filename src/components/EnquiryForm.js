@@ -1,8 +1,6 @@
 import { Dialog, DialogContent, DialogTitle, Grid, TextField, Button } from '@mui/material'
-import { red } from '@mui/material/colors'
 import { makeStyles } from '@mui/styles'
-import { margin, width } from '@mui/system'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './enquiryForm.css'
 
 
@@ -29,7 +27,7 @@ const useStyles = makeStyles(theme => ({
       // border : '1px solid green',
     }, 
     redColor: {
-        color : 'red'
+        // color : 'red'
     },          
   }));
   
@@ -47,7 +45,7 @@ const initialValues = {
 
 function EnquiryForm(props) {
   const classes = useStyles()
-  const { title, content, openEnquiryform, setOpenEnquiryform} = props;
+  const { title, openEnquiryform, setOpenEnquiryform} = props;
   const [formData, setFormData] = useState(initialValues)
  
   const handleChange = (e) =>{
